@@ -848,9 +848,8 @@ int avio_accept(AVIOContext *s, AVIOContext **c);
  */
 int avio_handshake(AVIOContext *c);
 
-int av_url_open_whitelist(URLContext **puc, const char *filename, int flags,
+int av_url_open_whitelist(void **puc, const char *filename, int flags,
                          const AVIOInterruptCB *int_cb, AVDictionary **options,
-                         const char *whitelist, const char* blacklist,
-                         URLContext *parent);
+                         const char *whitelist, const char* blacklist);
 
 #endif /* AVFORMAT_AVIO_H */
