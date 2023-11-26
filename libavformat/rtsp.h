@@ -650,6 +650,11 @@ void ff_rtsp_undo_setup(AVFormatContext *s, int send_packets);
  */
 int ff_rtsp_open_transport_ctx(AVFormatContext *s, RTSPStream *rtsp_st);
 
+/**
+ * Open RTSP transport context.
+ */
+int rtsp_open_transport_ctx(AVFormatContext *s, RTSPStream *rtsp_st);
+
 extern const AVOption ff_rtsp_options[];
 
 #endif /* AVFORMAT_RTSP_H */

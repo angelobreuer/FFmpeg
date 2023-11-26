@@ -823,6 +823,10 @@ void ff_rtsp_close_streams(AVFormatContext *s)
     av_freep(&rt->recvbuf);
 }
 
+int rtsp_open_transport_ctx(AVFormatContext *s, RTSPStream *rtsp_st) {
+    return ff_rtsp_open_transport_ctx(s, rtsp_st);
+}
+
 int ff_rtsp_open_transport_ctx(AVFormatContext *s, RTSPStream *rtsp_st)
 {
     RTSPState *rt = s->priv_data;
