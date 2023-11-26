@@ -301,7 +301,7 @@ int av_url_open_whitelist(void **puc, const char *filename, int flags,
                          const AVIOInterruptCB *int_cb, AVDictionary **options,
                          const char *whitelist, const char* blacklist)
 {
-    return ffurl_open_whitelist((URLContext **)puc, filename, flags, int_cb, options, whitelist, blacklist, nullptr);
+    return ffurl_open_whitelist((URLContext **)puc, filename, flags, int_cb, options, whitelist, blacklist, NULL);
 }
 
 int ffurl_open_whitelist(URLContext **puc, const char *filename, int flags,
