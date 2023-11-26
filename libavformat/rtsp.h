@@ -655,6 +655,12 @@ int ff_rtsp_open_transport_ctx(AVFormatContext *s, RTSPStream *rtsp_st);
  */
 int av_rtsp_open_transport_ctx(AVFormatContext *s, RTSPStream *rtsp_st);
 
+const RTPDynamicProtocolHandler *
+av_rtp_handler_find_by_name(const char *name, enum AVMediaType codec_type);
+
+const RTPDynamicProtocolHandler *
+av_rtp_handler_find_by_id(int id, enum AVMediaType codec_type);
+
 extern const AVOption ff_rtsp_options[];
 
 #endif /* AVFORMAT_RTSP_H */

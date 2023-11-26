@@ -828,6 +828,18 @@ int av_rtsp_open_transport_ctx(AVFormatContext *s, RTSPStream *rtsp_st)
     return ff_rtsp_open_transport_ctx(s, rtsp_st);
 }
 
+const RTPDynamicProtocolHandler *
+av_rtp_handler_find_by_name(const char *name, enum AVMediaType codec_type)
+{
+    return ff_rtp_handler_find_by_name(name, codec_type);
+}
+
+const RTPDynamicProtocolHandler *
+av_rtp_handler_find_by_id(int id, enum AVMediaType codec_type)
+{
+    return ff_rtp_handler_find_by_id(id, codec_type);
+}
+
 int ff_rtsp_open_transport_ctx(AVFormatContext *s, RTSPStream *rtsp_st)
 {
     RTSPState *rt = s->priv_data;
