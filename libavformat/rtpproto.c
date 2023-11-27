@@ -193,6 +193,7 @@ static void build_udp_url(RTPContext *s,
     if (s->dscp >= 0)
         url_add_option(buf, buf_size, "dscp=%d", s->dscp);
     url_add_option(buf, buf_size, "fifo_size=0");
+    url_add_option(buf, buf_size, "reuse=1");
     if (include_sources && include_sources[0])
         url_add_option(buf, buf_size, "sources=%s", include_sources);
     if (exclude_sources && exclude_sources[0])
